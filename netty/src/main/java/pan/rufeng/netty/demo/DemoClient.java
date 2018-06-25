@@ -48,8 +48,7 @@ public class DemoClient {
 
             // Start the client.
             ChannelFuture f = b.connect(host, port).sync(); // (5)
-
-
+            System.out.println(DemoClient.class.getName() + " started and connected to " + host + ":" + port);
             // Wait until the connection is closed.
             f.channel().closeFuture().sync();
         } finally {
